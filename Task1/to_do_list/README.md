@@ -41,12 +41,12 @@ python --version
 
 ### 2. Open the project folder in a terminal
 
-Navigate to the folder containing `todo.py`.
+Navigate to the folder containing `to_do_list.py`.
 
 ### 3. Run the program
 
 ```bash
-python todo.py
+python to_do_list.py
 ```
 
 ## 💻 Example Output
@@ -83,9 +83,9 @@ Thank you for using To-Do List.
 ## 📂 Project Structure
 
 ```text
-Project-1-ToDo-List/
+Project-1-To-Do-List/
 │
-├── todo.py
+├── to_do_list.py
 └── README.md
 ```
 
