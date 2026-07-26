@@ -46,18 +46,24 @@ Python Lists, Loops, Exception Handling, Accumulator Pattern, `max()`, `min()`, 
 
 ### 🔐 Project 3: Random Password Generator
 
-A Python-based password generator that creates secure random passwords according to a user-specified password length.
+A command-line Python application that generates secure random passwords based on a user-specified password length.
+
+The generator ensures that every password contains uppercase letters, lowercase letters, digits, and special characters.
 
 **Features:**
 - User-defined password length
-- Uses uppercase and lowercase letters
-- Includes numbers and special characters
-- Secure random character selection
-- Input validation
-- Minimum password length validation
+- Supports password lengths from 8 to 64 characters
+- Guarantees at least one uppercase letter (`A-Z`)
+- Guarantees at least one lowercase letter (`a-z`)
+- Guarantees at least one digit (`0-9`)
+- Guarantees at least one special character
+- Uses secure random character generation
+- Securely shuffles password characters
+- Validates generated passwords
+- Handles invalid user input
 
 **Concepts Used:**  
-Functions, `string` Module, `secrets` Module, Exception Handling, String Manipulation, `join()`
+Python Functions, `string` Module, `secrets` Module, Lists, Loops, String Manipulation, Exception Handling, Input Validation, `any()`, `join()`
 
 ---
 
@@ -67,6 +73,7 @@ Functions, `string` Module, `secrets` Module, Exception Handling, String Manipul
 - Git
 - GitHub
 - Command-Line Interface (CLI)
+- Python Built-in Modules
 
 ---
 
@@ -85,7 +92,7 @@ DecodeLabs-Internship/
 │   ├── expense_tracker.py
 │   └── README.md
 │
-└── Project-3-Password-Generator/
+└── Project-3-Random-Password-Generator/
     ├── password_generator.py
     └── README.md
 ```
@@ -94,30 +101,33 @@ DecodeLabs-Internship/
 
 ## ▶️ How to Run the Projects
 
-1. Make sure **Python 3** is installed on your system.
-2. Clone or download this repository.
-3. Open the required project folder in your terminal.
-4. Run the corresponding Python file.
+### Requirements
 
-For example:
+Make sure **Python 3** is installed on your system.
+
+No external Python packages are required for these projects.
+
+### Run a Project
+
+Clone or download this repository and open the required project folder in your terminal.
+
+**Project 1:**
 
 ```bash
 python todo.py
 ```
 
-or
+**Project 2:**
 
 ```bash
 python expense_tracker.py
 ```
 
-or
+**Project 3:**
 
 ```bash
 python password_generator.py
 ```
-
-No external Python packages are required for these projects.
 
 ---
 
@@ -125,15 +135,17 @@ No external Python packages are required for these projects.
 
 Through these projects, I practised:
 
-- Python fundamentals
+- Python programming fundamentals
 - Lists and string manipulation
 - Loops and conditional statements
 - Functions
+- Mathematical operations and accumulators
 - Exception handling
 - Input validation
 - Python built-in modules
+- Secure random value generation
 - Command-line application development
-- Writing clean and readable Python code
+- Writing structured and readable Python code
 - Git and GitHub for project management
 - Project documentation using README files
 
@@ -143,7 +155,7 @@ Through these projects, I practised:
 
 **Domain:** Python Programming  
 **Organization:** DecodeLabs  
-**Year:** 2026
+**Batch:** 2026
 
 ---
 
@@ -151,7 +163,7 @@ Through these projects, I practised:
 
 This repository documents my project work and learning progress during the **DecodeLabs Python Programming Internship**.
 
-Each project is stored in a separate folder along with its own `README.md` containing project-specific information and instructions for running the program.
+Each project is organized in a separate folder along with its own `README.md` containing detailed project information, features, concepts used, and instructions for running the program.
 
 ---
 
