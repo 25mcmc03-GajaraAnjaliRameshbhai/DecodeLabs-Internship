@@ -84,7 +84,7 @@ DecodeLabs-Internship/
 │
 ├── README.md
 │
-├── Project-1-ToDo-List/
+├── Project-1-To-Do-List/
 │   ├── todo.py
 │   └── README.md
 │
@@ -92,7 +92,7 @@ DecodeLabs-Internship/
 │   ├── expense_tracker.py
 │   └── README.md
 │
-└── Project-3-Random-Password-Generator/
+└── Project-3-Password-Generator/
     ├── password_generator.py
     └── README.md
 ```
@@ -114,7 +114,7 @@ Clone or download this repository and open the required project folder in your t
 **Project 1:**
 
 ```bash
-python todo.py
+python to_do_list.py
 ```
 
 **Project 2:**
