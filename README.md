@@ -4,7 +4,12 @@ This repository contains the projects completed during my **Python Programming I
 
 The purpose of this repository is to document my learning progress and practical implementation of Python programming concepts through hands-on projects.
 
-@DecodeLabs Internship Certificate
+---
+
+## 🏆 Internship Certificate
+
+[📄 View My DecodeLabs Internship Certificate (PDF)](./DecodeLabs%20Internship%20Certificate.pdf)
+
 ---
 
 ## 📂 Projects
