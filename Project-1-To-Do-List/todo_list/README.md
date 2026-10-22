@@ -96,7 +96,3 @@ todo_list/
 ## Learning Outcome
 
 This project demonstrates how a simple task-management program can be developed into a browser-based application. It combines Python fundamentals with Django's request/response flow and frontend technologies to create a more accessible user interface.
-
-## Notes
-
-Run this project independently from the other applications. Each application has its own Django configuration and should be started from its own project directory.
