@@ -1,130 +1,104 @@
-# 💰 Expense Tracker
+# Expense Tracker — Personal Finance Dashboard
 
-## 📌 Description
+A browser-based expense tracking application built with Python and Django, using HTML, CSS, and JavaScript for the interface. It converts a console-based expense calculator into a visual dashboard for recording expenses and reviewing spending summaries.
 
-The Expense Tracker is a command-line application developed using Python as part of the DecodeLabs Python Programming Internship.
+## Features
 
-The program allows users to continuously enter their expense amounts and keeps track of the running total. When the user enters `quit`, the application displays a summary containing the total number of expenses, total amount spent, average expense, highest expense, lowest expense, and a list of all entered expenses.
+- Record an expense amount and an optional note.
+- Display recorded transactions in a list or ledger.
+- Calculate total spending.
+- Calculate average, highest, and lowest expense values.
+- Display the number of recorded transactions.
+- Provide a clear financial overview at a glance.
+- Validate expense input, including invalid or negative amounts where enforced by the application.
+- Use a responsive interface for different screen sizes.
 
-## ✨ Features
+The available features depend on the current implementation. If a feature is not present in the UI, remove it from this list before publishing.
 
-- Add multiple expense amounts
-- Display the running total after every entry
-- Store all entered expenses
-- Calculate total spending
-- Calculate average spending
-- Display the highest expense
-- Display the lowest expense
-- Display a numbered list of expenses
-- Reject negative expense amounts
-- Handle invalid input using exception handling
-- Exit the program using the `quit` command
+## Technology Stack
 
-## 🛠️ Technologies Used
+- **Python 3** — application logic and calculations
+- **Django** — web framework, views, templates, and data handling
+- **HTML** — forms, dashboard structure, and transaction presentation
+- **CSS** — finance dashboard styling and responsive layout
+- **JavaScript** — client-side interactions where implemented
+- **SQLite** — default development database, if configured in the project
 
-- Python 3
+## How to Run
 
-## 📚 Concepts Used
+### Requirements
 
-- Python Lists
-- `while` loop
-- `try-except` exception handling
-- `float()` type conversion
-- Conditional statements
-- Accumulator pattern
-- `len()`
-- `max()`
-- `min()`
-- `enumerate()`
-- User input and validation
+- Python 3 installed
+- A terminal opened in this project folder
 
-## ▶️ How to Run
+### Setup
 
-### 1. Make sure Python is installed
+Create and activate a virtual environment:
 
-Check your Python installation using:
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+Install dependencies:
 
 ```bash
-python --version
+python -m pip install -r requirements.txt
 ```
 
-### 2. Open the project folder in a terminal
-
-Navigate to the folder containing `expense_tracker.py`.
-
-### 3. Run the program
+Apply database migrations:
 
 ```bash
-python expense_tracker.py
+python manage.py migrate
 ```
 
-### 4. Enter expenses
+Start the development server:
 
-Enter expense amounts one at a time.
-
-Type:
-
-```text
-quit
+```bash
+python manage.py runserver
 ```
 
-when you want to stop entering expenses and view the final summary.
+Open **http://127.0.0.1:8000/** in your browser.
 
-## 💻 Example Output
+To stop the server, press `Ctrl+C` in the terminal.
 
-```text
-========================================
-        EXPENSE TRACKER
-========================================
-Type 'quit' anytime to finish.
+## Project Structure
 
-Enter expense amount: 100
-Added ₹100.00
-Running Total: ₹100.00
-
-Enter expense amount: 50
-Added ₹50.00
-Running Total: ₹150.00
-
-Enter expense amount: 25
-Added ₹25.00
-Running Total: ₹175.00
-
-Enter expense amount: quit
-
-========================================
-        EXPENSE SUMMARY
-========================================
-Total Expenses : 3
-Total Spent    : ₹175.00
-Average Spend  : ₹58.33
-Highest Spend  : ₹100.00
-Lowest Spend   : ₹25.00
-
-Expense List
-1. ₹100.00
-2. ₹50.00
-3. ₹25.00
-
-Thank you!
-```
-
-## 📂 Project Structure
+The exact folders may vary slightly by version.
 
 ```text
-Project-2-Expense-Tracker/
-│
-├── expense_tracker.py
+expense_tracker/
+├── manage.py
+├── requirements.txt
+├── config/
+├── expenses/
+├── templates/
+├── static/
 └── README.md
 ```
 
-## 🎯 Learning Outcome
+- `manage.py` — Django command-line utility used to run the application.
+- `config/` — project settings and URL configuration.
+- `expenses/` — expense-related application logic and data models.
+- `templates/` — Django HTML templates.
+- `static/` — CSS, JavaScript, and other static assets.
+- `requirements.txt` — Python dependencies.
 
-Through this project, I practiced continuous user input, Python lists, loops, exception handling, input validation, accumulator logic, and basic calculations on stored data.
+## Concepts Practised
 
-## 👩‍💻 Project Information
+- Python lists, functions, and conditional logic
+- Numeric conversion and expense calculations
+- Input validation and exception handling
+- Django views, URL routing, templates, and models
+- HTML forms and displaying transaction data
+- CSS dashboard layout and responsive design
+- JavaScript interactions
+- Database migrations and CRUD-style workflows
 
-**Project:** Project 2 - Expense Tracker  
-**Domain:** Python Programming  
-**Internship:** DecodeLabs  
-**Year:** 2026
+## Learning Outcome
+
+This project demonstrates how Python calculation logic can power a web-based finance dashboard. It combines data entry, validation, summary calculations, Django's request/response flow, and frontend presentation.
+
+## Notes
+
+Run this project independently from the other applications. Each application has its own Django configuration and should be started from its own project directory.
