@@ -1,107 +1,125 @@
 # DecodeLabs Python Programming Internship 🚀
 
-This repository contains the projects completed during my **Python Programming Internship at DecodeLabs – 2026**.
+This repository contains three projects completed during my **Python Programming Internship at DecodeLabs — 2026**. Each project includes **two versions**:
 
-The purpose of this repository is to document my learning progress and practical implementation of Python programming concepts through hands-on projects.
+- **CLI (Command-Line Interface):** the original terminal-based Python program.
+- **GUI (Web Interface):** a browser-based version built with Python and Django, with HTML and CSS and JavaScript where included.
+
+The repository documents my progress in Python fundamentals and how the same core ideas can be presented through both a command-line program and a web interface.
 
 ---
 
 ## 🏆 Internship Certificate
 
-[📄 View My DecodeLabs Internship Certificate (PDF)](./DecodeLabs%20Internship%20Certificate.pdf)
+[📄 View the DecodeLabs Internship Certificate (PDF)](./DecodeLabs%20Internship%20Certificate.pdf)
 
 ---
 
 ## 📂 Projects
 
-### 📝 Project 1: To-Do List
+### 📝 Project 1 — To-Do List
 
-A simple command-line To-Do List application that allows users to add and view their daily tasks through a menu-driven interface.
+A task-management program available as a terminal menu and as a browser-based daily planner.
 
-**Features:**
-- Add new tasks
-- View all added tasks
-- Display tasks in numbered order
-- Handle invalid menu choices
-- Exit the application
+**CLI features**
+- Add tasks and view them in a numbered list.
+- Use a simple menu, handle invalid choices, and exit the program.
 
-**Concepts Used:**  
-Python Lists, `append()`, Loops, Conditional Statements, `enumerate()`, User Input
+**Web UI features**
+- Add tasks using a web form.
+- View, search, complete, and delete tasks.
+- See total, completed, and pending task counts.
+- Save task records in the project's SQLite database.
 
----
+**Concepts:** Python lists, `append()`, loops, conditional statements, `enumerate()`, user input, Django views and routes, HTML forms, and SQLite.
 
-### 💰 Project 2: Expense Tracker
+### 💰 Project 2 — Expense Tracker
 
-A command-line Expense Tracker that allows users to continuously enter expense amounts and keeps track of their spending.
+An expense tracker available as a terminal program and as a browser-based spending dashboard.
 
-**Features:**
-- Add multiple expenses
-- Display running total
-- Calculate total spending
-- Calculate average spending
-- Display highest and lowest expense
-- Display all entered expenses
-- Reject negative values
-- Handle invalid input
-- Exit using the `quit` command
+**CLI features**
+- Enter multiple expenses and see the running total.
+- Review total, average, highest, and lowest expenses.
+- View a numbered expense list; reject negative values and handle invalid input.
 
-**Concepts Used:**  
-Python Lists, Loops, Exception Handling, Accumulator Pattern, `max()`, `min()`, `enumerate()`, Input Validation
+**Web UI features**
+- Add expenses with an optional note.
+- View recorded transactions and summary statistics.
+- Calculate total spending, average, highest and lowest expense, and transaction count.
+- Save expense records in the project's SQLite database.
 
----
+**Concepts:** Python lists, loops, exception handling, numeric conversion and validation, accumulator pattern, `sum()`, `max()`, `min()`, Django, and SQLite.
 
-### 🔐 Project 3: Random Password Generator
+### 🔐 Project 3 — Random Password Generator
 
-A command-line Python application that generates secure random passwords based on a user-specified password length.
+A password generator available as a terminal program and as a browser-based tool.
 
-The generator ensures that every password contains uppercase letters, lowercase letters, digits, and special characters.
+**CLI features**
+- Generate a password using a user-specified length.
+- Require a length between 8 and 64 characters.
+- Include uppercase letters, lowercase letters, digits, and symbols.
+- Validate input and the generated password.
 
-**Features:**
-- User-defined password length
-- Supports password lengths from 8 to 64 characters
-- Guarantees at least one uppercase letter (`A-Z`)
-- Guarantees at least one lowercase letter (`a-z`)
-- Guarantees at least one digit (`0-9`)
-- Guarantees at least one special character
-- Uses secure random character generation
-- Securely shuffles password characters
-- Validates generated passwords
-- Handles invalid user input
+**Web UI features**
+- Choose password length and character groups in the browser.
+- Generate a password and show validation or input feedback.
+- Use Python's `secrets` module for secure random selection.
 
-**Concepts Used:**  
-Python Functions, `string` Module, `secrets` Module, Lists, Loops, String Manipulation, Exception Handling, Input Validation, `any()`, `join()`
+**Concepts:** functions, string manipulation, `string`, `secrets`, lists, loops, conditional statements, exception handling, and input validation.
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Python 3
-- Git
-- GitHub
-- Command-Line Interface (CLI)
-- Python Built-in Modules
+- **Python 3** — CLI programs and application logic
+- **Django** — web framework for the GUI versions
+- **HTML, CSS, JavaScript** — browser interface and client-side interactions where implemented
+- **SQLite** — persistent data for the To-Do List and Expense Tracker web versions; a database file is also included with the Password Generator project
+- **Git and GitHub** — version control and repository hosting
+
+The command-line scripts use Python's standard library. The web UI versions require Django, listed in each app's `requirements.txt`.
 
 ---
 
 ## 📁 Repository Structure
 
 ```text
-DecodeLabs-Internship/
-│
+DecodeLabs-Internship-main/
 ├── README.md
+├── DecodeLabs Internship Certificate.pdf
 │
 ├── Project-1-To-Do-List/
-│   ├── todo.py
-│   └── README.md
+│   ├── README.md
+│   ├── to_do_list.py                 # CLI version
+│   └── todo_list/                    # Web UI version
+│       ├── app.py                    # Django settings, routes, and views
+│       ├── index.html                # Web interface
+│       ├── manage.py                 # Django command-line entry point
+│       ├── requirements.txt
+│       └── db.sqlite3                # SQLite database
 │
 ├── Project-2-Expense-Tracker/
-│   ├── expense_tracker.py
-│   └── README.md
+│   ├── README.md
+│   ├── expense_tracker.py             # CLI version
+│   └── expense_tracker/               # Web UI version
+│       ├── app.py
+│       ├── index.html
+│       ├── manage.py
+│       ├── requirements.txt
+│       └── db.sqlite3
 │
 └── Project-3-Password-Generator/
-    ├── password_generator.py
-    └── README.md
+    ├── README.md
+    ├── password_generator.py          # CLI version
+    └── password_generator/            # Web UI version
+        ├── app.py
+        ├── index.html
+        ├── manage.py
+        ├── requirements.txt
+        └── db.sqlite3
 ```
+
+Each web app keeps its Django configuration and routes in `app.py` to reduce the number of separate files. The included `db.sqlite3` files are retained; do not delete them if you need to preserve their existing data.
 
 ---
 
@@ -109,31 +127,69 @@ DecodeLabs-Internship/
 
 ### Requirements
 
-Make sure **Python 3** is installed on your system.
+- Python 3 installed
+- Internet access may be needed the first time you install Django
+- For the web versions, use the terminal in the relevant GUI folder shown below
 
-No external Python packages are required for these projects.
+### A. Run a CLI version
 
-### Run a Project
+Open a terminal in the repository, then run the command for the project you want:
 
-Clone or download this repository and open the required project folder in your terminal.
-
-**Project 1:**
-
-```bash
-python to_do_list.py
-```
-
-**Project 2:**
+**Project 1 — To-Do List**
 
 ```bash
-python expense_tracker.py
+python Project-1-To-Do-List/to_do_list.py
 ```
 
-**Project 3:**
+**Project 2 — Expense Tracker**
 
 ```bash
-python password_generator.py
+python Project-2-Expense-Tracker/expense_tracker.py
 ```
+
+**Project 3 — Random Password Generator**
+
+```bash
+python Project-3-Password-Generator/password_generator.py
+```
+
+On Windows, use `py` instead of `python` if that is how Python is configured on your system.
+
+### B. Run a web UI version
+
+Each web app is self-contained and has its own `requirements.txt`. Run the following steps **inside the relevant GUI folder**.
+
+1. Open a terminal in one of these folders:
+   - `Project-1-To-Do-List/todo_list/`
+   - `Project-2-Expense-Tracker/expense_tracker/`
+   - `Project-3-Password-Generator/password_generator/`
+2. Create and activate a virtual environment (recommended):
+
+   **Windows PowerShell**
+   ```powershell
+   py -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+   **macOS/Linux**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. Install the dependency and start Django:
+
+   ```bash
+   python -m pip install -r requirements.txt
+   python manage.py runserver
+   ```
+
+4. Open **http://127.0.0.1:8000/** in your browser.
+5. To stop the development server, press **Ctrl+C** in the terminal.
+
+Run only one web app per port at a time. Stop the current server before starting another app on port `8000`, or configure a different port if you want to run multiple apps simultaneously.
+
+> The Django development server is for local development, not production deployment. The SQLite database included with each web app is local to that project.
 
 ---
 
@@ -141,36 +197,29 @@ python password_generator.py
 
 Through these projects, I practised:
 
-- Python programming fundamentals
-- Lists and string manipulation
-- Loops and conditional statements
-- Functions
-- Mathematical operations and accumulators
-- Exception handling
-- Input validation
-- Python built-in modules
-- Secure random value generation
-- Command-line application development
-- Writing structured and readable Python code
-- Git and GitHub for project management
-- Project documentation using README files
+- Python programming fundamentals, lists, loops, and conditional logic
+- Functions, string manipulation, and built-in modules
+- Numeric calculations, accumulators, and input validation
+- Exception handling and user-friendly error feedback
+- Secure random generation with Python's `secrets` module
+- Building web interfaces with Django, HTML, CSS, and JavaScript
+- Handling form submissions and URL routes in Django
+- Storing and retrieving data with SQLite
+- Organizing code and documenting projects with README files
+- Using Git and GitHub to manage and share project work
 
 ---
 
 ## 👩‍💻 Internship Information
 
-**Domain:** Python Programming  
-**Organization:** DecodeLabs  
-**Batch:** 2026
+- **Domain:** Python Programming
+- **Organization:** DecodeLabs
+- **Batch:** 2026
 
 ---
 
 ## 📌 About This Repository
 
-This repository documents my project work and learning progress during the **DecodeLabs Python Programming Internship**.
-
-Each project is organized in a separate folder along with its own `README.md` containing detailed project information, features, concepts used, and instructions for running the program.
-
----
+This repository documents my project work and learning progress during the **DecodeLabs Python Programming Internship**. Each project includes its original CLI program, a web UI version, and project-specific documentation.
 
 ⭐ **Thank you for visiting this repository!**
